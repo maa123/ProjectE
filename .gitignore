@@ -278,3 +278,4 @@ main/java/moze_intel/network/packets/AddEmcPKT.java
 main/java/moze_intel/utils/MozeLogger.java
 main/java/moze_intel/utils/PlayerBagInventory.java
 main/java/moze_intel/utils/PlayerKnowledge.java
+.vscode/settings.json

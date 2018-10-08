@@ -56,6 +56,18 @@ public class ArchangelSmite extends RingToggle implements IPedestalItem, IModeCh
 		return stack;
 	}
 
+	@Override
+	public boolean onEntitySwing(EntityLivingBase entity, ItemStack stack){
+		if (entity instanceof EntityPlayer) {
+			if (!entity.worldObj.isRemote) {
+				for (int i = 0; i < 7 ; i++){
+					fireArrow(stack, entity.worldObj, (EntityPlayer) entity);
+				}
+			}
+		}
+		return true;
+	}
+
 	private void fireArrow(ItemStack ring, World world, EntityLivingBase shooter)
 	{
 		EntityHomingArrow arrow = new EntityHomingArrow(world, shooter, 2.0F);
