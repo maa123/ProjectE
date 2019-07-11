@@ -39,11 +39,13 @@ public class EntityHomingArrow extends EntityArrow
 	public EntityHomingArrow(World world)
 	{
 		super(world);
+		//this.setDamage(5.0D);
 	}
 
 	public EntityHomingArrow(World world, EntityLivingBase par2, float par3) 
 	{
 		super(world, par2, par3);
+		//this.setDamage(5.0D);
 	}
 
 	@Override
@@ -51,6 +53,7 @@ public class EntityHomingArrow extends EntityArrow
 	{
 		super.entityInit();
 		dataWatcher.addObject(DW_TARGET_ID, NO_TARGET); // Target entity id
+		//this.setDamage(5.0D);
 	}
 
 	@Override
